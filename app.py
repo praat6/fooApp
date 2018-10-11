@@ -1,11 +1,11 @@
 from flask import Flask, make_response,request,abort,jsonify,redirect,render_template,url_for
 from flask_pymongo import PyMongo
 from flask_login import LoginManager, current_user, logout_user, login_user, login_required
-from .forms import ProductForm, LoginForm
+from forms import ProductForm, LoginForm
 from bson.objectid import ObjectId
 import json
 import bson
-from .model import User
+from model import User
 
 app = Flask(__name__)
 
