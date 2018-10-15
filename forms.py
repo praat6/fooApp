@@ -6,6 +6,12 @@ class ProductForm(Form):
   description = TextAreaField('Description')
   price = FloatField('price',[NumberRange(0.00),required()] )
 
+  def fill(self, nom, descr, preu):
+    self.name.data = nom
+    self.description.data = descr
+    self.price.data = preu
+    return(self)
+
 class LoginForm(Form):
     """Render HTML input for user login form.
 
